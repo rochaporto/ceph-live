@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ceph Cluster</title>
+
+		<style type="text/css">
+		 body {
+		 	padding-top: 50px; 
+		 	background-color: #e5e5e5 !important;
+		 }
+		</style>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap-3.0.3.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/libs/bootswatch/flatly/bootstrap.min.css">
+		
+		<link rel="stylesheet" href="assets/libs/vex/vex.css" />
+		<link rel="stylesheet" href="assets/libs/vex/vex-theme-default.css" />
+		<link rel="stylesheet" type="text/css" href="assets/libs/messenger/css/messenger.css">
+		<link rel="stylesheet" type="text/css" href="assets/libs/messenger/css/messenger-theme-flat.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		
+	</head>
+	<body>
+
+	    <!-- container for svg root element -->
+		<div class="container">
+			<div id="controlPanel" class="row"></div>
+			<div id="topologyDisplay" style="border: 1px solid black; background-color: #FFF" class="row"></div>
+		</div>
+
+		<!-- Javascript -->
+		<script type="text/javascript" src="assets/libs/jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap-3.0.3.min.js"></script>
+		<script type="text/javascript" src="assets/libs/messenger/js/messenger.min.js"></script>
+		<script type="text/javascript" src="assets/libs/messenger/js/messenger-theme-flat.js"></script>
+		<script type="text/javascript">
+			Messenger.options = {
+			    extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
+			    theme: 'flat'
+			};
+		</script>
+		<script src="assets/libs/vex/vex.combined.min.js"></script>
+		<script>vex.defaultOptions.className = 'vex-theme-default';</script>
+		<script type="text/javascript" src="assets/libs/d3/d3.v3.min.js"></script>
+		<script type="text/javascript" src="assets/libs/glow.js"></script>
+		<script type="text/javascript" src="assets/js/atomDB.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
