@@ -2,8 +2,6 @@
     var width = 1160,
         height = 600;
 
-    var color = d3.scale.category20();
-
     var radius = d3.scale.sqrt().range([0, 6]);
 
     var selectionGlove = glow("selectionGlove").rgb("#0000A0").stdDeviation(7);
@@ -18,7 +16,7 @@
     var linkSelected;
     var linkClicked = function(dataPoint) {
         Messenger().post({
-            message: 'New Link Selected',
+            message: 'Link Selected',
             type: 'info',
             hideAfter: 3,
             showCloseButton: true
@@ -30,22 +28,10 @@
         linkSelected = d3.select(this).select("line").style("filter", "url(#selectionGlove)");
     };
 
-    var generateRandomID = function() {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-            var r = Math.random() * 16 | 0,
-                v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
-    }
-
     var svg = d3.select("#topologyDisplay").append("svg")
         .attr("width", width)
         .attr("height", height)
         .call(selectionGlove);
-
-    var getRandomInt = function(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
 
     var refreshTopology = function(topology) {
         $('#topologyDisplay').empty();
@@ -64,7 +50,7 @@
     };
 
     $.getJSON("ceph.json", function(json) {
-        topology = json;
+        topology = { "nodes": json.output.osds, "links": [] }
         refreshTopology(topology);
     });
 
