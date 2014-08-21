@@ -43,7 +43,7 @@
                 "last_clean_begin": 0,
                 "last_clean_end": 0,
                 "lost_at": 0,
-                "osd": 0,
+                "osd": -1,
                 "primary_affinity": "1.000000",
                 "public_addr": "192.168.5.230:6800/16765",
                 "state": [
@@ -54,7 +54,7 @@
                 "up_from": 9,
                 "up_thru": 26,
                 "uuid": "d0e25824-e8a3-4a59-b253-2141b786db9d",
-                "weight": "1.000000"
+                "crush_weight": "1.000000"
             },
             {
                 "cluster_addr": "192.168.5.230:6806/17034",
@@ -76,7 +76,7 @@
                 "up_from": 13,
                 "up_thru": 26,
                 "uuid": "cd4bbe65-0d64-4758-b164-aa80681ab12c",
-                "weight": "1.000000"
+                "crush_weight": "1.000000"
             }
         ],
         "pg_temp": [],
